@@ -11,6 +11,7 @@ body {
     color: black;
     overflow-x: hidden;
     font-size: 18px;
+    padding-top: 0;
 }
 
 h1 {
@@ -55,6 +56,7 @@ h5 {
 .container:after {
     clear: both;
 }
+
 
 /*
 NAVBAR AREA
@@ -128,9 +130,16 @@ NAVBAR AREA
     color: white;
 }
 
+#searchText-nav{
+    font-size: 18px;
+}
+
 /* 
 SEARCH BOX
 */
+.container-style{
+    padding-top: 70px;
+}
 
 .from-pixabay {
     text-align: center;
@@ -154,6 +163,10 @@ SEARCH BOX
     padding: 5px 10px;
     height: 34px;
     background-image: none;
+}
+
+#searchText{
+    font-size: 18px;
 }
 
 .paginations {
@@ -225,6 +238,14 @@ IMAGE CONTAINER
     animation-delay: 1.25s;
 }
 
+#contact{
+        -webkit-animation-duration: 1.75s;
+        -moz-animation-duration: 1.75s;
+        animation-duration: 1.75s;
+        -webkit-animation-delay: 1.25s;
+        -moz-animation-delay: 1.25s;
+        animation-delay: 1.25s;
+}
 /* animation end */
 
 .brick img {
@@ -239,6 +260,10 @@ Footer
 footer {
     text-align: center;
     margin-top: 40px;
+    position: relative;
+    width: 100%;
+    bottom: -66px;
+    opacity: 0;
 }
 
 a:link,
@@ -312,6 +337,7 @@ footer {
 MEDIA QUERIES
 */
 
+
 @media only screen and (min-width: 1280px) {
     .paginations {
         width: 35%;
@@ -326,7 +352,7 @@ MEDIA QUERIES
     }
     .container-style {
         width: 85%;
-        padding: 2em;
+        padding: 70px 2em 2em 2em;
         margin: 0 auto;
     }
     .container-style-nav {
@@ -341,7 +367,7 @@ MEDIA QUERIES
     }
 }
 
-@media only screen and (min-width: 468px) and (max-width: 990px) {
+@media only screen and (min-width: 468px) and (max-width: 1000px) {
     .masonry {
         -moz-column-count: 2;
         -webkit-column-count: 2;
@@ -349,7 +375,7 @@ MEDIA QUERIES
     }
     .container-style {
         width: 95%;
-        padding: 2em;
+        padding: 70px 2em 2em 2em;
         margin: 0 auto;
     }
     .container-style-nav {
@@ -358,6 +384,9 @@ MEDIA QUERIES
     }
     .paginations {
         width: 48%;
+    }
+    .brick img {
+        max-height: 400 px;
     }
 }
 
@@ -384,11 +413,13 @@ MEDIA QUERIES
         padding-top: 15px;
         margin-top: 0;
     }
-    body {
-        padding-top: 70px;
-    }
+
     .nav-style {
         border-radius: 0 0 4px 4px;
+    }
+
+    body{
+        padding-top: 0;
     }
 }
 
@@ -408,22 +439,6 @@ MEDIA QUERIES
     }
     .btn-display {
         display: none;
-    }
-}
-
-@media only screen and (min-width: 468px) and (max-width: 1000px) {
-    .masonry {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-    .container-style {
-        width: 95%;
-        padding: 2em;
-        margin: 0 auto;
-    }
-    .brick img {
-        max-height: 400 px;
     }
 }
 
